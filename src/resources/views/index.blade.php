@@ -28,7 +28,7 @@
         </nav>
         
     </header>
-    <main class="container">
+    <main class="container-fluid">
         <section>
         <div class="main-capture">
                 <img src="{{asset('images/PAK88_syokutakukaraage20150203190242_TP_V4.jpg')}}" alt="" class="main-image">
