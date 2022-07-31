@@ -37,7 +37,7 @@
         
         </section>
 
-        <section>
+        <section class="section2">
             <div class="description-title">
                 <img src="{{asset('images/icon1.png')}}" alt="" class="description-title-logo">
                 <h2>KARAAGE MANIAとは？</h2>
@@ -62,7 +62,6 @@
             <div class="header-title">KARAAGE MANIA</div>
     </div>
     <div class="footer-right">
-        <nav>
             <ul class="footer-nav">
                 <li class="footer-nav-item">お問い合わせ</li>
                 <li class="footer-nav-item">最新投稿一覧</li>
@@ -71,7 +70,6 @@
                 <li class="footer-nav-item">プライバシーポリシー</li>
                 <li class="footer-nav-item">タイプから探してみる</li>
             </ul>
-        </nav>
     </div>
     </footer>
   </body>
