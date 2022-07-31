@@ -28,7 +28,7 @@
         </nav>
         
     </header>
-    <main>
+    <main class="container">
         <section>
         <div class="main-capture">
                 <img src="{{asset('images/PAK88_syokutakukaraage20150203190242_TP_V4.jpg')}}" alt="" class="main-image">
@@ -52,6 +52,8 @@
                 NO KARAGE , NO LIFE.<br>
                 あなたの好みの唐揚げをぜひ探してみてください。<br>
             </p>
+
+            <button class="site-description-button">唐揚げを探してみる！</button>
         </section>    
 
     </main>

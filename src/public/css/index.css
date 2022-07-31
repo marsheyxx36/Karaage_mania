@@ -114,7 +114,7 @@ header{
     height: 100px;
     position: fixed;
     z-index: 5;
-    
+    color: #707070;
 }
 
 .header-left{
@@ -199,12 +199,22 @@ h2{
 .site-description{
     line-height: 5em;
     margin-left: 2%;
+    font-size: 1.2em;
+}
+
+.site-description-button{
+    border-radius: 10px;
+    background-color: #FFBD3A;
+    width: 20%;
+    height: 5%;
+    margin-left: 40%;
 }
 
 footer{
     width: 100%;
     height: 25vh;
     background-color: #F8B600;
+    color: #707070;
 }
 
 .footer-left{
