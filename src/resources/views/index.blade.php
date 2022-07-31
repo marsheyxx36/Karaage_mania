@@ -26,7 +26,7 @@
     <main>
         <section>
         <div class="main-image">
-                <img src="{{asset('images/PAK88_syokutakukaraage20150203190242.jpg')}}" alt="" width="1000px" height="800px">
+                <img src="{{asset('images/PAK88_syokutakukaraage20150203190242.jpg')}}" alt="" width="100%" height="auto">
         </div>
         <h1>あなたの食べたいからあげにきっと出会えるサイト</h1>
         </section>
