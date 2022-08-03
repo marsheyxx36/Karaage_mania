@@ -1,17 +1,32 @@
-<header>
-    <div class="header-left">
-        <img src="{{asset('images/icon2.png')}}" alt="" class="header-logo">
-        <div class="header-title">KARAAGE MANIA</div>
-    </div>
- 
-    <nav class="header-right">
-        <ul class="header-nav">
-            <li class="header-nav-item">最新投稿一覧</li>
-            <li class="header-nav-item">地域から探してみる</li>
-            <li class="header-nav-item">タイプで探してみる</li>
-            <li class="header-nav-item">ログイン</li>
-            <li class="header-nav-item">新規登録</li>
+<header class="fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-warning">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">KARAAGE MANIA</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse ml-auto" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="#">最新投稿一覧</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">地域から探す</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">タイプで探してみる</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">タイプで探してみる</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">ログイン</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">新規登録</a>
+          </li>
         </ul>
-    </nav>
-    
+      </div>
+    </div>
+  </nav>
 </header>

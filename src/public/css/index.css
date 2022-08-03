@@ -104,11 +104,35 @@ input, select {
 
 /* reset css end */
 
+@media screen and (min-width:768px) { 
+  /*　レスポンシブ用　*/
+  .section2{
+    width: 100%;
+    height: 130vw;
+}
+
+.site-description-button{
+  border-radius: 10px;
+  background-color: #FFBD3A;
+  width: 30vw;
+  height: 40px;
+  margin-left: 40%;
+  margin-top: 3vw;
+  font-size: 1vw;
+}
+
+}
+
+
+
+
 body{
     width: 100%;
     
 }
-header{
+
+/* ヘッダー */
+.header{
     width: 100%;
     background-color: #F8B600;
     height: 100px;
@@ -129,8 +153,9 @@ header{
 .header-right{
     display: flex;
     float: right;
-    width: 40%;
+    width: 50%;
     height: 100px;
+    margin-right: 5%;
     align-items: center;    
 }
 .header-logo{
@@ -155,6 +180,7 @@ header{
     font-size: 1vw;
 }
 
+/* メイン */
 .main-capture{
     width: 100%;
     position: relative;
@@ -162,7 +188,7 @@ header{
 }
 
 .main-image{
-    width: 100%;
+    width: 100vw;
     height: auto;
     opacity: 0.4;
     
@@ -177,8 +203,8 @@ header{
     color: #707070;
 }
 .section2{
-    width: 100%;
-    height: 1000px;
+  width: 100%;
+  height: 100vw;
 }
 .description-title{
     display: flex;
@@ -207,11 +233,14 @@ h2{
 .site-description-button{
     border-radius: 10px;
     background-color: #FFBD3A;
-    width: 20%;
-    height: 5%;
+    width: 30vw;
+    height: 70px;
     margin-left: 40%;
+    margin-top: 3vw;
     font-size: 1vw;
 }
+
+/* フッター */
 
 footer{
     width: 100%;
