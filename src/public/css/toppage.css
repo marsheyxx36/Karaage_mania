@@ -1,0 +1,83 @@
+
+
+@media screen and (min-width:768px) { 
+  /*　レスポンシブ用　*/
+  .section2{
+    width: 100%;
+    height: 130vw;
+}
+
+.site-description-button{
+  border-radius: 10px;
+  background-color: #FFBD3A;
+  width: 30vw;
+  height: 40px;
+  margin-left: 40%;
+  margin-top: 3vw;
+  font-size: 1vw;
+}
+
+}
+
+
+
+/* メイン */
+.main-capture{
+    width: 100%;
+    position: relative;
+
+}
+
+.main-image{
+    width: 100vw;
+    height: auto;
+    opacity: 0.4;
+    
+}
+
+.main-catch{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    text-align: center;
+    font-size: 3vw;
+    color: #707070;
+}
+.section2{
+  width: 100%;
+  height: 100vw;
+}
+.description-title{
+    display: flex;
+    width: 30%;
+    height: 100px;
+    margin-left: 2%;
+    align-items: center;
+    margin-top: 10%;
+}
+.description-title-logo{
+    width: 50px;
+    width: 50px;
+}
+h2{
+    color: #FFBD3A;
+    font-size: 2vw;
+    margin-left: 3%;
+}
+
+.site-description{
+    line-height: 5em;
+    margin-left: 2%;
+    font-size: 1.3vw;
+}
+
+.site-description-button{
+    border-radius: 10px;
+    background-color: #FFBD3A;
+    width: 30vw;
+    height: 70px;
+    margin-left: 40%;
+    margin-top: 3vw;
+    font-size: 1vw;
+}
+
