@@ -1,38 +1,82 @@
+
 .posts-title{
     display: flex;
-    width: 30%;
+    width: 50%;
     height: 100px;
-    margin-left: 2%;
     align-items: center;
     margin-top: 10%;
+    font-size: 40px;
+    margin: 20px auto;
 }
+
+
 .posts-title-logo{
-    width: 50px;
-    width: 50px;
+    width: 30px;
+    width: 30px;
 }
 h2{
     color: #FFBD3A;
-    font-size: 2vw;
+    font-size: 20px;
     margin-left: 3%;
 }
 
 .posts{
+    width: 100%;
 }
 
 .post{
-    width: 80%;
+    
     display: flex;
+    width: 1000px;
+    margin-top: 30px;
 }
 
 .post-image{
-    width: 20vw;
+    width: 200px;
     height:auto;
+    margin-right: 30px;
 }
 
 .post-cotent{
-    width: 50%;
+    width: 100%;
+    margin-left: 20px;
 }
 
 .post-category{
     list-style: none;
+}
+
+.post-category-item{
+    margin: 10px 0;
+}
+
+@media screen and (max-width:768px) { 
+    /*　レスポンシブ用　*/
+    .posts-title{
+        display: flex;
+        width: 100%;
+        height: 100px;
+        align-items: center;
+        margin-top: 10%;
+        font-size: 40px;
+    }
+.posts-title >  h2{
+        color:  #FFBD3A;
+        font-size: 20px;
+        margin-left: 3%;
+    }
+
+   .post{
+   display: flex;
+   flex-direction: column;
+   margin: 40px auto;
+   }
+   .post-image{
+    width: 200px;
+    height:auto;
+    margin-bottom: 20px;
+   }
+   .post-description{
+    width: 100%;
+   }
 }

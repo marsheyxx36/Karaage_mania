@@ -1,26 +1,3 @@
-
-
-@media screen and (min-width:768px) { 
-  /*　レスポンシブ用　*/
-  .section2{
-    width: 100%;
-    height: 130vw;
-}
-
-.site-description-button{
-  border-radius: 10px;
-  background-color: #FFBD3A;
-  width: 30vw;
-  height: 40px;
-  margin-left: 40%;
-  margin-top: 3vw;
-  font-size: 1vw;
-}
-
-}
-
-
-
 /* メイン */
 .main-capture{
     width: 100%;
@@ -80,4 +57,22 @@ h2{
     margin-top: 3vw;
     font-size: 1vw;
 }
+
+@media screen and (min-width:768px) { 
+    /*　レスポンシブ用　*/
+    .section2{
+      width: 100%;
+      height: 130vw;
+  }
+  
+  .site-description-button{
+    border-radius: 10px;
+    background-color: #FFBD3A;
+    width: 30vw;
+    height: 40px;
+    margin-left: 40%;
+    margin-top: 3vw;
+    font-size: 1vw;
+  }
+}  
 
