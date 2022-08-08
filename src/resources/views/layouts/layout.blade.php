@@ -8,16 +8,15 @@
     <title>Karaage Mania</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     @if(Request::is('toppage'))
-    <link rel="stylesheet" href="{{ asset('css/toppage.css') }}">
+      <link rel="stylesheet" href="{{ asset('css/toppage.css') }}">
     @elseif(Request::is('index'))
-    <link rel="stylesheet" href="{{ asset('css/index.css') }}">
+      <link rel="stylesheet" href="{{ asset('css/index.css') }}">
     @elseif(Request::is('login','register'))
-    <link rel="stylesheet" href="{{ asset('css/user.css') }}">
+      <link rel="stylesheet" href="{{ asset('css/user.css') }}">
+    @elseif(Request::is('post'))
+      <link rel="stylesheet" href="{{ asset('css/index.css') }}">
     @endif
-    <link
-    href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-    rel="stylesheet"
-  />
+      <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"/>
   </head>
   <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
