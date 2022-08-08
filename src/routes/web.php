@@ -17,8 +17,8 @@ Route::get('/toppage', function () {
     return view('toppage');
 });
 
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
 
-
-Route::get('/index', function () {
-    return view('index');
-});
+require __DIR__.'/auth.php';
