@@ -16,15 +16,32 @@
           <li class="nav-item">
             <a class="nav-link" href="#">タイプで探してみる</a>
           </li>
+          @guest
           <li class="nav-item">
-            <a class="nav-link" href="#">タイプで探してみる</a>
+            <a class="nav-link" href="/login">ログイン</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">ログイン</a>
+            <a class="nav-link" href="/register">新規登録</a>
+          </li>
+          @endguest
+          
+          @auth
+
+          <li class="nav-item">
+            <a class="nav-link" href="/login">投稿する</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">新規登録</a>
+            <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+
+                    <x-responsive-nav-link :href="route('logout')"
+                            onclick="event.preventDefault();
+                                        this.closest('form').submit();">
+                        {{ __('Log Out') }}
+                    </x-responsive-nav-link>
+                </form>
           </li>
+          @endauth
         </ul>
       </div>
     </div>
