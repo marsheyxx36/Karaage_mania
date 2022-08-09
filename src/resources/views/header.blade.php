@@ -28,7 +28,7 @@
           @auth
 
           <li class="nav-item">
-            <a class="nav-link" href="/login">投稿する</a>
+            <a class="nav-link" href="/post/create">投稿する</a>
           </li>
           <li class="nav-item">
             <form method="POST" action="{{ route('logout') }}">
