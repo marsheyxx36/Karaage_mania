@@ -1,56 +1,71 @@
 @extends('layouts.layout')
-<x-guest-layout>
-        <form method="POST" action="/post" class="user-form">
+@section('content')
+  
+
+        <!-- Validation Errors -->
+
+   
+    <div class="post-form">
+        <h1 class="post-title">唐揚げの情報を投稿する。</h1>
+        <form method="POST" action="#" class="mt-5">
             @csrf
 
-            <!-- Name -->
-            <div class="mb-5">
-                <label for="store_name">店舗名</label>
-
-                <input id="store_name" class="block mt-1 w-full" type="text" name="name" value="" required autofocus />
+            <div class="mb-3">
+                <label for="store_name" class="form-label">店舗名：</label>
+                <input type="text" id="store_name" class="form-control"  placeholder="店舗名を記入してください" name="store_name">
             </div>
-
-            <!-- Email Address -->
            
-                <x-label for="area" value="">地域</label>
+            <div class="mb-3">
+                <label for="store_name" class="form-label">住所：</label>
+                <input type="text" id="address" class="form-control"  placeholder="住所を記入してください" name="address">
+                <button type="button" id="btn" class="btn btn-outline-dark mt-3">マップで検索</button>
+                <div id="map" class="map mt-2"></div>
+            </div>
 
-                <select id="area" class="block mt-1 w-full" name="area" :value="" required >
-                    <option value="北海道"></option>
-                    <option value="東北"></option>
-                    <option value="関東"></option>
-                    <option value="甲信越"></option>
-                    <option value="東海"></option>
-                    <option value="近畿"></option>
-                    <option value="四国"></option>
-                    <option value="中国"></option>
-                    <option value="九州・沖縄"></option>
+            <div class="mb-3">
+                <label for="area" class="form-label">地域：</label>
+                <select class="form-select" id="area"aria-label="Default select example">
+                    <option selected disabled>地域を選択してください</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
                 </select>
-
-            <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Password')" class="mt-5"/>
-
-                <x-dropdown id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="new-password" />
             </div>
 
-            <!-- Confirm Password -->
-            <div class="mt-4">
-                <x-label for="password_confirmation" value="__('Confirm Password')" />
-
-                <x-input id="password_confirmation" class="block mt-1 w-full"
-                                type="password"
-                                name="password_confirmation" required />
+            <div class="mb-3">
+                <label for="type" class="form-label">唐揚げのタイプ：</label>
+                <select class="form-select" id="type" aria-label="Default select example">
+                    <option selected disabled>唐揚げのタイプを選択してください</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
             </div>
+            
 
+            <div class="mb-3">
+                <label for="item" class="form-label">商品名：</label>
+                <input type="text" id="item" class="form-control"  placeholder="店舗名を記入してください" name="item">
+            </div>
+            
+            <div class="mb-3">
+            <label for="comment" class="form-label">コメント：</label>
+           <textarea class="form-control" id="comment" aria-label="With textarea" name="comment"></textarea>
+        </div>
+                
+            <x-button class="ml-4">
+                {{ __('投稿する') }}
+            </x-button>
+
+
+            
+            
+            <!-- APIキーを指定してjsファイルを読み込む -->
+           
+            
             <div class="flex items-center justify-end mt-4">
-              
-
-                <x-button class="ml-4">
-                    {{ __('投稿') }}
-                </x-button>
+                
             </div>
         </form>
-</x-guest-layout>
+    </div>
+@endsection
