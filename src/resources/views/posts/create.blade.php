@@ -24,11 +24,11 @@
 
             <div class="mb-3">
                 <label for="area" class="form-label">地域：</label>
-                <select class="form-select" id="area"aria-label="Default select example">
+                <select class="form-select" id="area" aria-label="Default select example" name="area">
                     <option selected disabled>地域を選択してください</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                    @foreach(config('pref') as $pref_id => $name)
+                  <option value="{{ $pref_id }}">{{ $name }}</option>
+                @endforeach
                 </select>
             </div>
 
@@ -56,9 +56,6 @@
             <x-button class="ml-4">
                 {{ __('投稿する') }}
             </x-button>
-
-
-            
             
             <!-- APIキーを指定してjsファイルを読み込む -->
            
