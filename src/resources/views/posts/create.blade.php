@@ -53,6 +53,10 @@
            <textarea class="form-control" id="comment" aria-label="With textarea" name="comment"></textarea>
         </div>
                 
+        <div class="input-group mb-3">
+            <input type="file" class="form-control" id="inputGroupFile02" name="image">
+            <label class="input-group-text" for="inputGroupFile02">Upload</label>
+          </div>
             <x-button class="ml-4">
                 {{ __('投稿する') }}
             </x-button>
