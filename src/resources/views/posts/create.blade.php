@@ -7,7 +7,7 @@
    
     <div class="post-form">
         <h1 class="post-title">唐揚げの情報を投稿する。</h1>
-        <form method="POST" action="#" class="mt-5">
+        <form method="post" action="{{ route('post.store') }}" class="mt-5">
             @csrf
 
             <div class="mb-3">
