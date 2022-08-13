@@ -15,13 +15,14 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('store_name');
             $table->string('area');
             $table->string('address');
             $table->string('type');
             $table->string('item');
             $table->text('comment');
             $table->timestamps();
+            
         });
     }
 
