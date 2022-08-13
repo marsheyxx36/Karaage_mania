@@ -34,7 +34,7 @@
 
             <div class="mb-3">
                 <label for="type" class="form-label">唐揚げのタイプ：</label>
-                <select class="form-select" id="type" aria-label="Default select example">
+                <select class="form-select" id="type" aria-label="Default select example" name="type">
                     <option selected disabled>唐揚げのタイプを選択してください</option>
                     <option value="1">One</option>
                     <option value="2">Two</option>
