@@ -14,7 +14,7 @@
     @elseif(Request::is('login','register'))
       <link rel="stylesheet" href="{{ asset('css/user.css') }}">
     @elseif(Request::is('post'))
-      <link rel="stylesheet" href="{{ asset('css/post.css') }}">
+      <link rel="stylesheet" href="{{ asset('css/index.css') }}">
     @elseif(Request::is('post/create'))
     <link rel="stylesheet" href="{{ asset('css/post.css') }}">
     <script async src="https://maps.googleapis.com/maps/api/js?key="></script>
