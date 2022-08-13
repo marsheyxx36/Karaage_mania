@@ -8,8 +8,8 @@ class PostsController extends Controller
 {
     //投稿一覧表示
     public function index () 
-    {
-        return view('posts.index');
+    {   $posts = \DB::table('posts')->get();
+        return view('posts.index',compact('posts'));
     }
 
     //投稿画面表示
