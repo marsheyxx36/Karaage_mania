@@ -16,4 +16,15 @@ class PostsController extends Controller
     public function create(){
         return view('posts.create');
     }
+
+    public function store(){
+        $post = new Posts;
+        $post->store_name = $request->store_name;
+        $post->area = $request->area;
+        $post->address = $request->address;
+        $post->type = $request->type;
+        $post->item = $request->item;
+        $post->comment = $request->comment;
+        $post->save();
+    }
 }
