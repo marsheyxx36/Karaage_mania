@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Post;
 class PostsController extends Controller
 {
     //投稿一覧表示
@@ -17,8 +17,8 @@ class PostsController extends Controller
         return view('posts.create');
     }
 
-    public function store(){
-        $post = new Posts;
+    public function store(Request $request){
+        $post = new Post;
         $post->store_name = $request->store_name;
         $post->area = $request->area;
         $post->address = $request->address;
@@ -26,5 +26,6 @@ class PostsController extends Controller
         $post->item = $request->item;
         $post->comment = $request->comment;
         $post->save();
+        return redirect('/toppage');
     }
 }
