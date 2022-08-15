@@ -4,24 +4,20 @@
     <div class="post-form">
         <h1 class="post-title">唐揚げの情報を投稿する。</h1>
         @if (count($errors) > 0)
-   <div>
-       <ul>
-           @foreach ($errors->all() as $error)
-               <li>{{ $error }}</li>
-           @endforeach
-       </ul>
-   </div>
-   @endif
+        <p>入力に問題があります。再入力して下さい。</p>
+        @endif
+
         <form method="post" action="{{ route('post.store') }}" class="mt-5" enctype="multipart/form-data">
             @csrf
-
+        
             <div class="mb-3">
-                @error('name')
-                <tr><th>ERROR</th>
-                <td>{{$message}}</td></tr>
-            @enderror
+            
                 <label for="store_name" class="form-label">店舗名：</label>
+             
                 <input type="text" id="store_name" class="form-control"  placeholder="店舗名を記入してください" name="store_name">
+                @error('store_name')
+                <td class="error-message">{{$message}}</td></tr>
+            @enderror
             </div>
            
             <div class="mb-3">
