@@ -23,8 +23,8 @@ class PostsController extends Controller
         $post->area = $request->area;
         $post->address = $request->address;
         $post->type = $request->type;
-        $post->item = $request->item;
         $post->comment = $request->comment;
+        $post->image = $request->image;
         $post->save();
         return redirect('/toppage');
     }
