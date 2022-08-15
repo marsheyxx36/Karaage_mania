@@ -1,16 +1,25 @@
 @extends('layouts.layout')
 @section('content')
   
-
-        <!-- Validation Errors -->
-
-   
     <div class="post-form">
         <h1 class="post-title">唐揚げの情報を投稿する。</h1>
-        <form method="post" action="{{ route('post.store') }}" class="mt-5">
+        @if (count($errors) > 0)
+   <div>
+       <ul>
+           @foreach ($errors->all() as $error)
+               <li>{{ $error }}</li>
+           @endforeach
+       </ul>
+   </div>
+   @endif
+        <form method="post" action="{{ route('post.store') }}" class="mt-5" enctype="multipart/form-data">
             @csrf
 
             <div class="mb-3">
+                @error('name')
+                <tr><th>ERROR</th>
+                <td>{{$message}}</td></tr>
+            @enderror
                 <label for="store_name" class="form-label">店舗名：</label>
                 <input type="text" id="store_name" class="form-control"  placeholder="店舗名を記入してください" name="store_name">
             </div>
@@ -54,10 +63,14 @@
         </div>
                 
         <div class="input-group mb-3">
-            <input type="file" class="form-control" id="inputGroupFile02" name="image">
+
+            <input type="file" class="form-control" id="inputGroupFile02" name="image" >
             <label class="input-group-text" for="inputGroupFile02">Upload</label>
           </div>
-            <x-button class="ml-4">
+
+          
+            <img id="preview" src="https://placehold.jp/200x200.png" style="max-width:200px;">
+            <x-button class="ml-4 mt-3">
                 {{ __('投稿する') }}
             </x-button>
             
