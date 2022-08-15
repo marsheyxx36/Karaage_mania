@@ -6,10 +6,27 @@ window.onload = function(){
   btn.onclick = function(){
     initMap(address.value);
 };
+
+const fileimage = document.querySelector('#inputGroupFile02');
+
+fileimage.addEventListener('change', function() {
+ 
+  previewImage(this);
+});
+
 }
+
+function previewImage(obj)
+{
+	var fileReader = new FileReader();
+	fileReader.onload = (function() {
+		document.getElementById('preview').src = fileReader.result;
+	});
+	fileReader.readAsDataURL(obj.files[0]);
+}
+
  let initMap =function (address) {
   const geocoder = new google.maps.Geocoder();
-  // ここでaddressのvalueに住所のテキストを指定する
   geocoder.geocode( { address: address}, function(results, status) {
     if (status === google.maps.GeocoderStatus.OK) {
       const latlng = {
@@ -17,7 +34,7 @@ window.onload = function(){
         lng: results[0].geometry.location.lng()
       }
       const opts = {
-        zoom: 15,
+        zoom: 20,
         center: new google.maps.LatLng(latlng)
       }
       const map = new google.maps.Map(document.getElementById('map'), opts)
@@ -26,8 +43,8 @@ window.onload = function(){
         map: map 
       })
     } else {
-      console.error('Geocode was not successful for the following reason: ' + status)
       window.alert('マップの検索結果が見つかりませんでした。')
     }
   })
 }
+
