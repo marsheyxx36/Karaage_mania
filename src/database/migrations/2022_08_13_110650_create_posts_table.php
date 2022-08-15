@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('type');
             $table->string('item');
             $table->text('comment');
+            $table->file('image');
             $table->timestamps();
             
         });
