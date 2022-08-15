@@ -8,7 +8,7 @@
       <div class="collapse navbar-collapse ml-auto" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="#">最新投稿一覧</a>
+            <a class="nav-link " aria-current="page" href="/post">最新投稿一覧</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">地域から探す</a>
