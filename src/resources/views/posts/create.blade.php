@@ -15,14 +15,17 @@
                 <label for="store_name" class="form-label">店舗名：</label>
              
                 <input type="text" id="store_name" class="form-control"  placeholder="店舗名を記入してください" name="store_name">
-                @error('store_name')
-                <td class="error-message">{{$message}}</td></tr>
+            @error('store_name')
+                <p class="error-message mt-3">{{$message}} </p>
             @enderror
             </div>
            
             <div class="mb-3">
                 <label for="store_name" class="form-label">住所：</label>
                 <input type="text" id="address" class="form-control"  placeholder="住所を記入してください" name="address">
+                @error('address')
+                <p class="error-message mt-3">{{$message}} </p>
+            @enderror
                 <button type="button" id="btn" class="btn btn-outline-dark mt-3">マップで検索</button>
                 <div id="map" class="map mt-2"></div>
             </div>
@@ -35,6 +38,9 @@
                   <option value="{{ $pref_id }}">{{ $name }}</option>
                 @endforeach
                 </select>
+                @error('area')
+                <p class="error-message mt-3">{{$message}} </p>
+            @enderror
             </div>
 
             <div class="mb-3">
@@ -45,17 +51,26 @@
                     <option value="2">Two</option>
                     <option value="3">Three</option>
                 </select>
+                @error('type')
+                <p class="error-message mt-3">{{$message}} </p>
+            @enderror
             </div>
             
 
             <div class="mb-3">
                 <label for="item" class="form-label">商品名：</label>
                 <input type="text" id="item" class="form-control"  placeholder="店舗名を記入してください" name="item">
+                @error('item')
+                <p class="error-message mt-3">{{$message}} </p>
+            @enderror
             </div>
             
             <div class="mb-3">
             <label for="comment" class="form-label">コメント：</label>
            <textarea class="form-control" id="comment" aria-label="With textarea" name="comment"></textarea>
+           @error('comment')
+           <p class="error-message mt-3">{{$message}} </p>
+       @enderror
         </div>
                 
         <div class="input-group mb-3">
@@ -65,7 +80,10 @@
           </div>
 
           
-            <img id="preview" src="https://placehold.jp/200x200.png" style="max-width:200px;">
+            <img id="preview" src="" style="max-width:200px;">
+            @error('image')
+            <p class="error-message mt-3">{{$message}} </p>
+        @enderror
             <x-button class="ml-4 mt-3">
                 {{ __('投稿する') }}
             </x-button>
