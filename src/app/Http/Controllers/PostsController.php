@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Post;
+use App\Http\Requests\PostRequest;
 class PostsController extends Controller
 {
     //投稿一覧表示
@@ -18,16 +19,8 @@ class PostsController extends Controller
         return view('posts.create');
     }
 
-    public function store(Request $request){
-        $validate_rule =[
-            'store_name'=>'required',
-            'area'=> 'required',
-            'address'=> 'required',
-            'type'=> 'required',
-            'comment'=> 'required',
-            'item'=> 'required',
-            'image'=> 'required',
-        ];
+    public function store(PostRequest $request){
+       
         $post = new Post;
         $user_id = Auth::id();
         $post->store_name = $request->store_name;
@@ -38,8 +31,6 @@ class PostsController extends Controller
         $post->comment = $request->comment;
         $post->item = $request->item;
         $post->image = $request->image;
-        
-        $this->validate($request, $validate_rule);
         if($file = $request->image){
             
                $fileName = time().'.'.$file->getClientOriginalExtension();
